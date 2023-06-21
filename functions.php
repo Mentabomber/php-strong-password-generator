@@ -1,5 +1,5 @@
 <?php 
-    
+    session_start();
     error_reporting(E_ALL);
 
     $pswLength = $_GET["length"];
@@ -33,4 +33,5 @@
             
         return $psw;
     };
+
 ?>

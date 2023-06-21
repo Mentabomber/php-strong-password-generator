@@ -1,10 +1,11 @@
 <?php   
     include 'functions.php';
-    include 'index.php';
-    session_start();
+    
     echo '<span> La tua password è: ';
-    echo $_SESSION['password'];
-    echo '</span>';
+    foreach ($_SESSION['password'] as $character) {
+    echo $character;
+}
+echo '</span>';
 
 
         // echo var_dump($generatedPsw);

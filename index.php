@@ -23,9 +23,9 @@
                 include 'functions.php';
 
                 $generatedPsw =  rngPsw($pswLength);
-                foreach ($generatedPsw as $character) {
-                    echo $character;
-                }
+                // foreach ($generatedPsw as $character) {
+                //     echo $character;
+                // }
                 // var_dump($generatedPsw);
                 if ($generatedPsw !== []) {
                     
