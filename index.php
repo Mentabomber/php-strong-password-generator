@@ -17,15 +17,23 @@
         <input type="text" name="length">
         <input type="submit">
 
-        <span>La tua password è: 
+        <!-- <span>La tua password è:  -->
             <?php  
+                session_start();
                 include 'functions.php';
+
                 $generatedPsw =  rngPsw($pswLength);
                 foreach ($generatedPsw as $character) {
                     echo $character;
-                } 
+                }
+                // var_dump($generatedPsw);
+                if ($generatedPsw !== []) {
+                    
+                    header('Location: passwordpage.php');
+                }
+                $_SESSION['password'] = $generatedPsw;
              ?>
-        </span>
+        <!-- </span> -->
         
     </form>
 </body>
